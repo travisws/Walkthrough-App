@@ -60,8 +60,7 @@ public class FragmentDrawer extends Fragment {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflating view layout
         View layout = inflater.inflate(R.layout.fragment_navigation_drawer, container, false);
         recyclerView = (RecyclerView) layout.findViewById(R.id.drawerList);
@@ -78,7 +77,8 @@ public class FragmentDrawer extends Fragment {
 
             @Override
             public void onLongClick(View view, int position) {
-
+                drawerListener.onDrawerItemSelected(view, position);
+                mDrawerLayout.closeDrawer(containerView);
             }
         }));
 
@@ -119,10 +119,10 @@ public class FragmentDrawer extends Fragment {
 
     }
 
-    public static interface ClickListener {
-        public void onClick(View view, int position);
+    public interface ClickListener {
+        void onClick(View view, int position);
 
-        public void onLongClick(View view, int position);
+        void onLongClick(View view, int position);
     }
 
     static class RecyclerTouchListener extends RecyclerView.SimpleOnItemTouchListener {
@@ -164,6 +164,6 @@ public class FragmentDrawer extends Fragment {
     }
 
     public interface FragmentDrawerListener {
-        public void onDrawerItemSelected(View view, int position);
+        void onDrawerItemSelected(View view, int position);
     }
 }
