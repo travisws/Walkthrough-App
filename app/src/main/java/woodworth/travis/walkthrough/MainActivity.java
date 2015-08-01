@@ -7,18 +7,24 @@ import android.support.v4.widget.DrawerLayout;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Toast;
 
-import woodworth.travis.walkthrough.DaysOfWeek.FragmentHome;
-import woodworth.travis.walkthrough.DaysOfWeek.FragmentMonday;
+import io.realm.Realm;
+import io.realm.RealmResults;
+import woodworth.travis.walkthrough.model.RoomsDB;
+import woodworth.travis.walkthrough.daysOfWeek.FragmentHome;
+import woodworth.travis.walkthrough.daysOfWeek.FragmentMonday;
 
 public class MainActivity extends AppCompatActivity implements FragmentDrawer.FragmentDrawerListener {
 
     private Toolbar toolbar;
     private FragmentDrawer drawerFragment;
     private static String TAG = MainActivity.class.getSimpleName();
+    private Realm realm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +39,10 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
         drawerFragment.setUp(R.id.fragment_navigation_drawer, (DrawerLayout) findViewById(R.id.drawer_layout), toolbar);
         drawerFragment.setDrawerListener(this);
 
+        realm = Realm.getInstance(this); //DO NOT TOUCH!!! if you want realm to work...
+
+        Transaction();
+
         // display the first navigation drawer view on app launch
         displayView(0);
 
@@ -42,6 +52,7 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
+
         return true;
     }
 
@@ -90,5 +101,38 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
             getSupportActionBar().setTitle(title);
         }
     }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        realm.close(); // Remember to close.
+    }
+
+    public void Transaction(){
+
+        try{
+            realm.beginTransaction();
+            RoomsDB rooms = realm.createObject(RoomsDB.class);
+            rooms.setB201("Good");
+            rooms.setB518("Good");
+            realm.commitTransaction();
+        }catch(Exception e){
+            Log.d(TAG, "Transaction" + e);
+        }
+
+    }
+
+
+    public void realmResults(View view) {
+        try {
+            RealmResults<RoomsDB> results = realm.where(RoomsDB.class).equalTo("b201", "Good").findAll();
+
+            Toast.makeText(getApplicationContext(), "Results" + results,Toast.LENGTH_LONG).show();
+            Log.d(TAG, "Results" + results);
+        } catch (Exception e) {
+            Log.d(TAG, "Results" + e);
+        }
+    }
+
 
 }

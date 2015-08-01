@@ -1,4 +1,4 @@
-package woodworth.travis.walkthrough.DaysOfWeek;
+package woodworth.travis.walkthrough.daysOfWeek;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -9,7 +9,9 @@ import android.view.ViewGroup;
 
 import woodworth.travis.walkthrough.R;
 
+
 public class FragmentMonday extends Fragment {
+
 
     public FragmentMonday() {
         // Required empty public constructor
@@ -18,6 +20,7 @@ public class FragmentMonday extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
 
     }
 
@@ -41,4 +44,7 @@ public class FragmentMonday extends Fragment {
 
         super.onDetach();
     }
+
+
+
 }
