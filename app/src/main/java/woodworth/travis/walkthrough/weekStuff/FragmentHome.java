@@ -1,4 +1,4 @@
-package woodworth.travis.walkthrough.daysOfWeek;
+package woodworth.travis.walkthrough.weekStuff;
 
 
 import android.os.Bundle;
