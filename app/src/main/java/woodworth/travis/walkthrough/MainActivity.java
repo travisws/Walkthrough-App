@@ -15,7 +15,6 @@ import android.widget.Toast;
 
 import io.realm.Realm;
 import io.realm.RealmResults;
-import woodworth.travis.walkthrough.model.RoomsDB;
 import woodworth.travis.walkthrough.daysOfWeek.FragmentHome;
 import woodworth.travis.walkthrough.daysOfWeek.FragmentMonday;
 
@@ -41,7 +40,7 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
 
         realm = Realm.getInstance(this); //DO NOT TOUCH!!! if you want realm to work...
 
-        Transaction();
+        transaction();
 
         // display the first navigation drawer view on app launch
         displayView(0);
@@ -108,13 +107,15 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
         realm.close(); // Remember to close.
     }
 
-    public void Transaction(){
-
-        try{
+    public void transaction(){
+       try{
             realm.beginTransaction();
-            RoomsDB rooms = realm.createObject(RoomsDB.class);
-            rooms.setB201("Good");
-            rooms.setB518("Good");
+            for (int i = 0; i < 10; i++) {
+                RoomsDB person = realm.createObject(RoomsDB.class);
+                person.setId(i);
+                person.setB201("id" + i);
+                Log.d(TAG, "done" + i);
+            }
             realm.commitTransaction();
         }catch(Exception e){
             Log.d(TAG, "Transaction" + e);
@@ -125,14 +126,12 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
 
     public void realmResults(View view) {
         try {
-            RealmResults<RoomsDB> results = realm.where(RoomsDB.class).equalTo("b201", "Good").findAll();
-
+            RealmResults<RoomsDB> results = realm.where(RoomsDB.class).findAll();
             Toast.makeText(getApplicationContext(), "Results" + results,Toast.LENGTH_LONG).show();
             Log.d(TAG, "Results" + results);
         } catch (Exception e) {
             Log.d(TAG, "Results" + e);
         }
     }
-
 
 }

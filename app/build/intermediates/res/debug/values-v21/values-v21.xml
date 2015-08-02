@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- From: file:/home/travis/AndroidStudioProjects/WalkThrough/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values-v21/values-v21.xml -->
+    <!-- From: file:/home/travisws/AndroidStudioProjects/WalkThrough/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values-v21/values-v21.xml -->
     <eat-comment/>
     <style name="Base.TextAppearance.AppCompat" parent="android:TextAppearance.Material"/>
     <style name="Base.TextAppearance.AppCompat.Body1" parent="android:TextAppearance.Material.Body1"/>
@@ -221,13 +221,13 @@
     <style name="Base.Widget.AppCompat.TextView.SpinnerItem" parent="android:Widget.Material.TextView.SpinnerItem"/>
     <style name="Base.Widget.AppCompat.Toolbar.Button.Navigation" parent="android:Widget.Material.Toolbar.Button.Navigation">
     </style>
-    <!-- From: file:/home/travis/AndroidStudioProjects/WalkThrough/app/src/main/res/values-v21/styles.xml -->
+    <!-- From: file:/home/travisws/AndroidStudioProjects/WalkThrough/app/src/main/res/values-v21/styles.xml -->
     <eat-comment/>
     <style name="DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
         <item name="spinBars">true</item>
         <item name="color">@android:color/black</item>
     </style>
-    <!-- From: file:/home/travis/AndroidStudioProjects/WalkThrough/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values-v21/values-v21.xml -->
+    <!-- From: file:/home/travisws/AndroidStudioProjects/WalkThrough/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/res/values-v21/values-v21.xml -->
     <eat-comment/>
     <style name="Platform.AppCompat" parent="android:Theme.Material">
         <item name="android:windowNoTitle">true</item>
@@ -263,7 +263,7 @@
         <item name="android:colorControlHighlight">?attr/colorControlHighlight</item>
         <item name="android:colorButtonNormal">?attr/colorButtonNormal</item>
     </style>
-    <!-- From: file:/home/travis/AndroidStudioProjects/WalkThrough/app/src/main/res/values-v21/styles.xml -->
+    <!-- From: file:/home/travisws/AndroidStudioProjects/WalkThrough/app/src/main/res/values-v21/styles.xml -->
     <eat-comment/>
     <style name="myAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/primaryColor</item>

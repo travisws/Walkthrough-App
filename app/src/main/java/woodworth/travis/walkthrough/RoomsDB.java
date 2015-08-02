@@ -1,14 +1,15 @@
-package woodworth.travis.walkthrough.model;
+package woodworth.travis.walkthrough;
 
 import io.realm.RealmObject;
+import io.realm.annotations.Ignore;
 import io.realm.annotations.PrimaryKey;
 
 /**
- * Created by travisws on 8/1/15.
+ * Created by travisws on 7/25/15.
  */
-public class Monday extends RealmObject{
+public class RoomsDB extends RealmObject {
 
-    @PrimaryKey
+
     private String          date;
     private String          b201;
     private String          b518;
@@ -19,6 +20,9 @@ public class Monday extends RealmObject{
     private long            ga405;
     private String          b404;
     private String          initials;
+
+    @Ignore
+    private long id;
 
 
     // Standard getters & setters...
@@ -83,4 +87,13 @@ public class Monday extends RealmObject{
     public void setInitials(String initials){
         this.initials = initials;
     }
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+
 }

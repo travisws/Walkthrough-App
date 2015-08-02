@@ -42,4 +42,5 @@
         app:layout="@layout/fragment_navigation_drawer"
         tools:layout="@layout/fragment_navigation_drawer" />
 
-</android.support.v4.widget.DrawerLayout><!-- From: file:/home/travis/AndroidStudioProjects/WalkThrough/app/src/main/res/layout/activity_main.xml -->
+
+</android.support.v4.widget.DrawerLayout><!-- From: file:/home/travisws/AndroidStudioProjects/WalkThrough/app/src/main/res/layout/activity_main.xml -->
