@@ -17,13 +17,16 @@ import io.realm.Realm;
 import io.realm.RealmResults;
 import woodworth.travis.walkthrough.daysOfWeek.FragmentHome;
 import woodworth.travis.walkthrough.daysOfWeek.FragmentMonday;
+import woodworth.travis.walkthrough.navStuff.FragmentDrawer;
+import woodworth.travis.walkthrough.realmStuff.RoomsDB;
 
 public class MainActivity extends AppCompatActivity implements FragmentDrawer.FragmentDrawerListener {
 
     private Toolbar toolbar;
     private FragmentDrawer drawerFragment;
-    private static String TAG = MainActivity.class.getSimpleName();
-    private Realm realm;
+    public static String TAG = MainActivity.class.getSimpleName();
+
+    public Realm realm;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -108,14 +111,13 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
     }
 
     public void transaction(){
-       try{
+
+        try{
             realm.beginTransaction();
-            for (int i = 0; i < 10; i++) {
-                RoomsDB person = realm.createObject(RoomsDB.class);
-                person.setId(i);
-                person.setB201("id" + i);
-                Log.d(TAG, "done" + i);
-            }
+            RoomsDB person = realm.createObject(RoomsDB.class);
+            person.setId(1);
+            person.setB201("2B201");
+            Log.d(TAG, "done");
             realm.commitTransaction();
         }catch(Exception e){
             Log.d(TAG, "Transaction" + e);
@@ -127,7 +129,7 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
     public void realmResults(View view) {
         try {
             RealmResults<RoomsDB> results = realm.where(RoomsDB.class).findAll();
-            Toast.makeText(getApplicationContext(), "Results" + results,Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Results" + results, Toast.LENGTH_LONG).show();
             Log.d(TAG, "Results" + results);
         } catch (Exception e) {
             Log.d(TAG, "Results" + e);

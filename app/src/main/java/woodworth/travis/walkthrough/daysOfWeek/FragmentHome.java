@@ -9,7 +9,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import woodworth.travis.walkthrough.NavigationDrawerAdapter;
+import woodworth.travis.walkthrough.navStuff.NavigationDrawerAdapter;
 import woodworth.travis.walkthrough.R;
 
 /**
