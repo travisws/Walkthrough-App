@@ -10,14 +10,15 @@ import io.realm.annotations.PrimaryKey;
 public class RoomsDB extends RealmObject {
 
 
-    private String          date;
+    private String          date_time;
     private String          b201;
     private String          b518;
     private String          amber;
     private String          b302;
     private String          b702;
     private String          b601;
-    private long            ga405;
+    private String          ga405;
+    private String          jet;
     private String          b404;
     private String          initials;
 
@@ -27,11 +28,13 @@ public class RoomsDB extends RealmObject {
 
     // Standard getters & setters...
 
-    public String getDate() {
-        return date;
+    public String getDate_time() {
+
+        return date_time;
     }
-    public void setDate(String date) {
-        this.date = date;
+    public void setDate_time(String date_time) {
+
+        this.date_time = date_time;
     }
     public String getB201() {
         return b201;
@@ -69,11 +72,17 @@ public class RoomsDB extends RealmObject {
     public void  setB601(String b601) {
         this.b601 = b601;
     }
-    public long getGa405() {
+    public String getGa405() {
         return ga405;
     }
-    public void setGa405(long ga405) {
+    public void setGa405(String ga405) {
         this.ga405 = ga405;
+    }
+    public String getJet() {
+        return jet;
+    }
+    public void setJet(String jet) {
+        this.jet = jet;
     }
     public String getB404(){
         return b404;

@@ -1,100 +1,99 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="woodworth.travis.walkthrough.daysOfWeek.FragmentMonday"
-    android:orientation="vertical">
+    tools:context="woodworth.travis.walkthrough.weekStuff.FragmentMonday"
+    android:orientation="vertical"
+    android:id="@+id/fragment_monday">
 
 
     <Button
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Button"
         android:id="@+id/button"
-        android:onClick="realmResults"
+        android:onClick="isEmpty"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="30dp"
         android:layout_gravity="right" />
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="2B201: "
+        android:id="@+id/b201"
+        android:hint="2B201"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="37dp"
-        android:id="@+id/b201" />
+        android:layout_alignParentStart="true" />
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="2B518: "
-        android:id="@+id/editText2"
+        android:id="@+id/b518"
         android:layout_below="@+id/b201"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:hint="2B518" />
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Amder Light: "
-        android:id="@+id/editText3"
-        android:layout_below="@+id/editText2"
-        android:layout_alignParentStart="true" />
+        android:id="@+id/amber"
+        android:layout_below="@+id/b518"
+        android:layout_alignParentStart="true"
+        android:hint="Amber Light" />
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="2B302: "
-        android:id="@+id/editText4"
-        android:layout_below="@+id/editText3"
-        android:layout_alignParentStart="true" />
+        android:id="@+id/b302"
+        android:layout_below="@+id/amber"
+        android:layout_alignParentStart="true"
+        android:hint="2B302" />
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="2B703: "
-        android:id="@+id/editText5"
-        android:layout_below="@+id/editText4"
-        android:layout_alignParentStart="true" />
+        android:id="@+id/b703"
+        android:layout_below="@+id/b302"
+        android:layout_alignParentStart="true"
+        android:hint="2B703:" />
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="2B601: "
-        android:id="@+id/editText6"
-        android:layout_below="@+id/editText5"
-        android:layout_alignParentStart="true" />
+        android:id="@+id/b601"
+        android:layout_below="@+id/b703"
+        android:layout_alignParentStart="true"
+        android:hint="2B601" />
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="GA405 :"
-        android:id="@+id/editText7"
-        android:layout_below="@+id/editText6"
-        android:layout_alignParentStart="true" />
+        android:id="@+id/ga405"
+        android:layout_below="@+id/b601"
+        android:layout_alignParentStart="true"
+        android:hint="GA405" />
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Jet Trmp (F): "
-        android:id="@+id/editText8"
-        android:layout_below="@+id/editText7"
-        android:layout_alignParentStart="true" />
+        android:id="@+id/jet"
+        android:layout_below="@+id/ga405"
+        android:layout_alignParentStart="true"
+        android:hint="Jet Trmp (F)" />
 
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="2B404 Monitors: "
-        android:id="@+id/editText9"
-        android:layout_below="@+id/editText8"
-        android:layout_alignParentStart="true" />
+        android:id="@+id/b404"
+        android:layout_below="@+id/jet"
+        android:layout_alignParentStart="true"
+        android:hint="2B404 Monitors" />
     <EditText
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Initials: "
-        android:id="@+id/editText10"
-        android:layout_below="@+id/editText9"
-        android:layout_alignParentStart="true" />
-
+        android:id="@+id/initials"
+        android:layout_below="@+id/b404"
+        android:layout_alignParentStart="true"
+        android:hint="Initials:" />
 
 </RelativeLayout>
