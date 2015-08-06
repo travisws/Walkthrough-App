@@ -7,18 +7,19 @@
 
 
     <Button
-        android:layout_width="match_parent"
+        android:layout_width="160dp"
         android:layout_height="wrap_content"
-        android:text="Button"
-        android:id="@+id/button"
+        android:text="Submit"
+        android:id="@+id/Submit"
         android:onClick="isEmpty"
+        android:background="@color/primaryColor"
+        android:layout_gravity="right"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="30dp"
-        android:layout_gravity="right" />
+        android:layout_marginBottom="44dp" />
 
     <EditText
-        android:layout_width="match_parent"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:id="@+id/b201"
         android:hint="2B201"
@@ -26,74 +27,77 @@
         android:layout_alignParentStart="true" />
 
     <EditText
-        android:layout_width="match_parent"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:id="@+id/b518"
-        android:layout_below="@+id/b201"
-        android:layout_alignParentStart="true"
-        android:hint="2B518" />
+        android:hint="2B518"
+        android:layout_above="@+id/amber"
+        android:layout_toEndOf="@+id/b201" />
 
     <EditText
-        android:layout_width="match_parent"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:id="@+id/amber"
-        android:layout_below="@+id/b518"
+        android:hint="Amber Light"
+        android:layout_below="@+id/b201"
         android:layout_alignParentStart="true"
-        android:hint="Amber Light" />
+        android:layout_marginTop="25dp" />
 
     <EditText
-        android:layout_width="match_parent"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:id="@+id/b302"
-        android:layout_below="@+id/amber"
-        android:layout_alignParentStart="true"
-        android:hint="2B302" />
+        android:hint="2B302"
+        android:layout_alignTop="@+id/amber"
+        android:layout_toEndOf="@+id/amber" />
 
     <EditText
-        android:layout_width="match_parent"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:id="@+id/b703"
-        android:layout_below="@+id/b302"
+        android:hint="2B703"
+        android:layout_below="@+id/amber"
         android:layout_alignParentStart="true"
-        android:hint="2B703:" />
+        android:layout_marginTop="32dp" />
 
     <EditText
-        android:layout_width="match_parent"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:id="@+id/b601"
-        android:layout_below="@+id/b703"
-        android:layout_alignParentStart="true"
-        android:hint="2B601" />
+        android:hint="2B601"
+        android:layout_alignTop="@+id/b703"
+        android:layout_toEndOf="@+id/b703" />
 
     <EditText
-        android:layout_width="match_parent"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:id="@+id/ga405"
-        android:layout_below="@+id/b601"
+        android:hint="GA405"
+        android:layout_below="@+id/b703"
         android:layout_alignParentStart="true"
-        android:hint="GA405" />
+        android:layout_marginTop="28dp" />
 
     <EditText
-        android:layout_width="match_parent"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:id="@+id/jet"
-        android:layout_below="@+id/ga405"
-        android:layout_alignParentStart="true"
-        android:hint="Jet Trmp (F)" />
+        android:hint="Jet Trmp (F)"
+        android:layout_alignTop="@+id/ga405"
+        android:layout_toEndOf="@+id/ga405" />
 
     <EditText
-        android:layout_width="match_parent"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:id="@+id/b404"
-        android:layout_below="@+id/jet"
-        android:layout_alignParentStart="true"
-        android:hint="2B404 Monitors" />
+        android:hint="2B404 Monitors"
+        android:layout_centerVertical="true"
+        android:layout_alignParentStart="true" />
     <EditText
-        android:layout_width="match_parent"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:id="@+id/initials"
-        android:layout_below="@+id/b404"
-        android:layout_alignParentStart="true"
-        android:hint="Initials:" />
+        android:hint="Initials:"
+        android:layout_alignTop="@+id/b404"
+        android:layout_toEndOf="@+id/b404" />
 
 </RelativeLayout>

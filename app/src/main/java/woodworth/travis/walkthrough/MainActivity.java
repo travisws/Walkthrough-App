@@ -15,7 +15,6 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import io.realm.Realm;
@@ -31,22 +30,20 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
     private FragmentDrawer drawerFragment;
     public static String TAG = MainActivity.class.getSimpleName();
 
-    private DateFormat df = new SimpleDateFormat("dd/MM/yy HH:mm:ss");
-    private Date dateobj = new Date();
+    protected  String df = DateFormat.getDateTimeInstance().format(new Date());
 
     public Realm realm;
 
-    private EditText b201;
-    private EditText b518;
-    private EditText amber;
-    private EditText b302;
-    private EditText b703;
-    private EditText b601;
-    private EditText ga405;
-    private EditText jet;
-    private EditText b404;
-    private EditText initials;
-
+    protected EditText b201;
+    protected EditText b518;
+    protected EditText amber;
+    protected EditText b302;
+    protected EditText b703;
+    protected EditText b601;
+    protected EditText ga405;
+    protected EditText jet;
+    protected EditText b404;
+    protected EditText initials;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -196,7 +193,7 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
             RoomsDB rooms = realm.createObject(RoomsDB.class);
 
             rooms.setId(1);
-            rooms.setDate_time("" + df.format(dateobj));
+            rooms.setDate_time("" + df);
             rooms.setB201("" + b20);
             rooms.setB518("" + b51);
             rooms.setAmber("" + ambe);
@@ -211,20 +208,11 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
             realm.commitTransaction();
 
             //This is just here for debugging
-            Log.d(TAG, "transaction" + "It is done running.");
+            Log.d(TAG, "transaction" + "done running.");
 
         }catch (Exception e){
             Log.d(TAG, "transaction" + e);
         }
-
-        try {
-            RealmResults<RoomsDB> results = realm.where(RoomsDB.class).findAll();
-            Toast.makeText(getApplicationContext(), "Results" + results, Toast.LENGTH_LONG).show();
-            Log.d(TAG, "Results" + results);
-        } catch (Exception e) {
-            Log.d(TAG, "Results" + e);
-        }
-
 
     }
 
@@ -232,7 +220,7 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
        //.contains()
         try {
             RealmResults<RoomsDB> results = realm.where(RoomsDB.class).findAll();
-            Toast.makeText(getApplicationContext(), "Results" + results, Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "" + results, Toast.LENGTH_LONG).show();
             Log.d(TAG, "Results" + results);
         } catch (Exception e) {
             Log.d(TAG, "Results" + e);
