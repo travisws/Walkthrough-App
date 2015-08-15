@@ -12,10 +12,6 @@ import java.util.List;
 
 import woodworth.travis.walkthrough.R;
 
-
-/**
- * Created by Ravi Tamada on 12-03-2015.
- */
 public class NavigationDrawerAdapter extends RecyclerView.Adapter<NavigationDrawerAdapter.MyViewHolder> {
     List<NavDrawerItem> data = Collections.emptyList();
     private LayoutInflater inflater;
