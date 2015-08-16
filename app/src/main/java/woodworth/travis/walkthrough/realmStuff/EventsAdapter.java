@@ -31,7 +31,7 @@ public class EventsAdapter extends RealmRecyclerViewAdapter<RoomsDB> {
     public void onBindViewHolder(RecyclerView.ViewHolder viewHolder, int i) {
         EventViewHolder evh = (EventViewHolder) viewHolder;
         RoomsDB event = getItem(i);
-        evh.tvName.setText(event.getB201());
+        evh.tvName.setText(event.getB201() + " " + event.getAmber());
     }
 
     /* The inner RealmBaseAdapter

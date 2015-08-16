@@ -14,15 +14,14 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import java.text.DateFormat;
-import java.util.Date;
 
 import io.realm.Realm;
 import io.realm.RealmConfiguration;
 import io.realm.RealmResults;
+import woodworth.travis.walkthrough.asyncTaskStuff.SaveInfo;
 import woodworth.travis.walkthrough.realmStuff.RoomsDB;
 import woodworth.travis.walkthrough.weekStuff.FragmentHome;
-import woodworth.travis.walkthrough.weekStuff.FragmentMonday;
+import woodworth.travis.walkthrough.weekStuff.FragmentInput;
 import woodworth.travis.walkthrough.navStuff.FragmentDrawer;
 
 public class MainActivity extends AppCompatActivity implements FragmentDrawer.FragmentDrawerListener {
@@ -31,20 +30,11 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
     private FragmentDrawer drawerFragment;
     public static String TAG = MainActivity.class.getSimpleName();
 
-    protected  String df = DateFormat.getDateTimeInstance().format(new Date());
-
     public Realm realm;
 
-    protected EditText b201;
-    protected EditText b518;
-    protected EditText amber;
-    protected EditText b302;
-    protected EditText b703;
-    protected EditText b601;
-    protected EditText ga405;
-    protected EditText jet;
-    protected EditText b404;
-    protected EditText initials;
+    protected EditText b201, b518, amber, b302, b703, b601, ga405, jet, b404, initials;
+
+    private SaveInfo asyncTask;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,7 +46,7 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         RealmConfiguration realmConfig = new RealmConfiguration.Builder(this).build();
-        Realm.deleteRealm(realmConfig); //Remember to remove
+        //Realm.deleteRealm(realmConfig); //Remember to remove
         Realm.setDefaultConfiguration(realmConfig);
         realm = Realm.getInstance(realmConfig); //DO NOT TOUCH!!! if you want realm to work...
 
@@ -103,10 +93,11 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
         switch (position) {
             case 0:
                 fragment = new FragmentHome();
-                //title = getString(R.string.drawer_close);
+                title = getString(R.string.home_page);
                 break;
             case 1:
-                fragment = new FragmentMonday();
+                fragment = new FragmentInput();
+                title = getString(R.string.input_page);
                 break;
             default:
                 break;
@@ -130,41 +121,6 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
 
     public void isEmpty(View v){
         b201 = (EditText)this.findViewById(R.id.b201);
-        b302 = (EditText)this.findViewById(R.id.b302);
-        jet = (EditText)this.findViewById(R.id.jet);
-        initials = (EditText)this.findViewById(R.id.initials);
-
-
-        long b20 = b201.getText().length();
-        long b30 = b302.getText().length();
-        long je = jet.getText().length();
-        long in = initials.getText().length();
-
-        if(b20 == 0){
-            Toast.makeText(getApplicationContext(), "You did not enter text in this box", Toast.LENGTH_LONG).show();
-        }else {
-            if (b30 == 0){
-                Toast.makeText(getApplicationContext(), "You did not enter text in this box", Toast.LENGTH_LONG).show();
-            }else {
-                if (je == 0){
-                    Toast.makeText(getApplicationContext(), "You did not enter text in this box", Toast.LENGTH_LONG).show();
-                }else {
-                    if (in == 0){
-                        Toast.makeText(getApplicationContext(), "You did not enter text in this box", Toast.LENGTH_LONG).show();
-                    }else{
-                        Test();
-                    }
-                }
-            }
-        }
-    }
-
-
-
-    public void Test(){
-
-        //Gets user input and binds it to a variable.
-        b201 = (EditText)this.findViewById(R.id.b201);
         b518 = (EditText)this.findViewById(R.id.b518);
         amber = (EditText)this.findViewById(R.id.amber);
         b302 = (EditText)this.findViewById(R.id.b302);
@@ -175,42 +131,33 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
         b404 = (EditText)this.findViewById(R.id.b404);
         initials = (EditText)this.findViewById(R.id.initials);
 
-        //Sets the raw input to a usable string.
-        String b20 = b201.getText().toString();
-        String b51 = b518.getText().toString();
-        String ambe = amber.getText().toString();
-        String b30 = b302.getText().toString();
-        String b70 = b703.getText().toString();
-        String b60 = b601.getText().toString();
-        String ga40 = ga405.getText().toString();
-        String je = jet.getText().toString();
-        String b40 = b404.getText().toString();
-        String initial = initials.getText().toString();
+        String b20 = b201.getText().toString(), b51 = b518.getText().toString(), ambe = amber.getText().toString(), b30 = b302.getText().toString(), b70 = b703.getText().toString();
+        String b60 = b601.getText().toString(), ga40 = ga405.getText().toString(), je = jet.getText().toString(), b40 = b404.getText().toString(), initial = initials.getText().toString();
 
-        realm.beginTransaction();
-        
-        RoomsDB rooms = realm.createObject(RoomsDB.class);
+        long qb20 = b201.getText().length(), qb30 = b302.getText().length(), qje = jet.getText().length(), in = initials.getText().length();
 
-        rooms.setId(1);
-        rooms.setDate_time("" + df);
-        rooms.setB201("" + b20);
-        rooms.setB518("" + b51);
-        rooms.setAmber("" + ambe);
-        rooms.setB302("" + b30);
-        rooms.setB702("" + b70);
-        rooms.setB601("" + b60);
-        rooms.setGa405("" + ga40);
-        rooms.setJet("" + je);
-        rooms.setB404("" + b40);
-        rooms.setInitials("" + initial);
+        if(qb20 == 0){
+            Toast.makeText(getApplicationContext(), "You did not enter text in the box", Toast.LENGTH_LONG).show();
+        }else {
+            if (qb30 == 0){
+                Toast.makeText(getApplicationContext(), "You did not enter text in the box", Toast.LENGTH_LONG).show();
+            }else {
+                if (qje == 0){
+                    Toast.makeText(getApplicationContext(), "You did not enter text in the box", Toast.LENGTH_LONG).show();
+                }else {
+                    if (in == 0){
+                        Toast.makeText(getApplicationContext(), "You did not enter text in the box", Toast.LENGTH_LONG).show();
+                    }else{
+                        int i = 1000;
+                        asyncTask = new SaveInfo();
+                        asyncTask.execute(b20, b51, ambe, b30, b70, b60, ga40, je, b40, initial);
+                        Toast.makeText(getApplicationContext(), "Done", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                }
+            }
+        }
 
-        realm.commitTransaction();
-
-
-        //This is just here for debugging
-        Log.d(TAG, "transaction" + "done running.");
-
-    }
 
     public void realmResults(View view) {
         //.contains()
@@ -224,6 +171,5 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
         }
 
     }
-
 
 }

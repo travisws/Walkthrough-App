@@ -1,8 +1,6 @@
 package woodworth.travis.walkthrough.weekStuff;
 
-import android.content.Context;
 import android.os.Bundle;
-import android.os.HandlerThread;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;

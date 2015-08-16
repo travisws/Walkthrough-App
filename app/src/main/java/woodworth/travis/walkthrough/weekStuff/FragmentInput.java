@@ -10,10 +10,10 @@ import android.view.ViewGroup;
 import woodworth.travis.walkthrough.R;
 
 
-public class FragmentMonday extends Fragment {
+public class FragmentInput extends Fragment {
 
 
-    public FragmentMonday() {
+    public FragmentInput() {
         // Required empty public constructor
     }
 
@@ -27,7 +27,7 @@ public class FragmentMonday extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,Bundle savedInstanceState) {
 
-        View rootView = inflater.inflate(R.layout.fragment_monday, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_input, container, false);
 
         // Inflate the layout for this fragment
         return rootView;

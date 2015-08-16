@@ -6,7 +6,7 @@
     <item>
         <selector>
             <item android:state_selected="true"
-                android:drawable="@color/Honeydew" />
+                 />
         </selector>
     </item>
 </ripple><!-- From: file:/home/travisws/AndroidStudioProjects/WalkThrough/app/src/main/res/drawable/ripple.xml -->
