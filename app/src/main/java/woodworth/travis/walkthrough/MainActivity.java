@@ -14,11 +14,11 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-
 import io.realm.Realm;
 import io.realm.RealmConfiguration;
 import io.realm.RealmResults;
-import woodworth.travis.walkthrough.asyncTaskStuff.SaveInfo;
+
+import woodworth.travis.walkthrough.asyncStuff.SaveInfo;
 import woodworth.travis.walkthrough.realmStuff.RoomsDB;
 import woodworth.travis.walkthrough.weekStuff.FragmentHome;
 import woodworth.travis.walkthrough.weekStuff.FragmentInput;
@@ -46,7 +46,7 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         RealmConfiguration realmConfig = new RealmConfiguration.Builder(this).build();
-        //Realm.deleteRealm(realmConfig); //Remember to remove
+        Realm.deleteRealm(realmConfig); //Remember to remove
         Realm.setDefaultConfiguration(realmConfig);
         realm = Realm.getInstance(realmConfig); //DO NOT TOUCH!!! if you want realm to work...
 
@@ -102,13 +102,11 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
             default:
                 break;
         }
-
         if (fragment != null) {
             FragmentManager fragmentManager = getSupportFragmentManager();
             FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
             fragmentTransaction.replace(R.id.container_body, fragment);
             fragmentTransaction.commit();
-
             // set the toolbar title
             getSupportActionBar().setTitle(title);
         }
@@ -148,7 +146,6 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
                     if (in == 0){
                         Toast.makeText(getApplicationContext(), "You did not enter text in the box", Toast.LENGTH_LONG).show();
                     }else{
-                        int i = 1000;
                         asyncTask = new SaveInfo();
                         asyncTask.execute(b20, b51, ambe, b30, b70, b60, ga40, je, b40, initial);
                         Toast.makeText(getApplicationContext(), "Done", Toast.LENGTH_SHORT).show();
@@ -162,14 +159,10 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
     public void realmResults(View view) {
         //.contains()
         try {
-
             RealmResults<RoomsDB> results = realm.where(RoomsDB.class).findAll();
-            Toast.makeText(getApplicationContext(), "" + results, Toast.LENGTH_LONG).show();
-
+            Toast.makeText(getApplicationContext(), "" + results, Toast.LENGTH_SHORT).show();
         } catch (Exception e) {
             Log.d(TAG, "Results" + e);
         }
-
     }
-
 }

@@ -10,6 +10,7 @@ import io.realm.annotations.PrimaryKey;
 public class RoomsDB extends RealmObject {
 
 
+    @PrimaryKey
     private String          date_time;
     private String          b201;
     private String          b518;
@@ -23,11 +24,9 @@ public class RoomsDB extends RealmObject {
     private String          initials;
 
     @Ignore
-    private long id;
-
+    private int             id;
 
     // Standard getters & setters...
-
     public String getDate_time() {
 
         return date_time;
@@ -100,9 +99,8 @@ public class RoomsDB extends RealmObject {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(int id) {
         this.id = id;
     }
-
 
 }
