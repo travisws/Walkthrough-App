@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 
 import io.realm.Realm;
 import io.realm.RealmResults;
+import woodworth.travis.walkthrough.MainActivity;
 import woodworth.travis.walkthrough.R;
 import woodworth.travis.walkthrough.realmStuff.EventsAdapter;
 import woodworth.travis.walkthrough.realmStuff.RealmEventsAdapter;
@@ -22,6 +23,7 @@ public class FragmentHome extends Fragment {
 
     private EventsAdapter adapter;
     private Realm realm;
+    public String x;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {

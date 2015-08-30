@@ -28,11 +28,9 @@ public class RoomsDB extends RealmObject {
 
     // Standard getters & setters...
     public String getDate_time() {
-
         return date_time;
     }
     public void setDate_time(String date_time) {
-
         this.date_time = date_time;
     }
     public String getB201() {
@@ -47,7 +45,7 @@ public class RoomsDB extends RealmObject {
     public void   setB518(String b518) {
         this.b518 = b518;
     }
-    public String getAmber() {
+    public String getAmber(){
         return amber;
     }
     public void   setAmber(String amber) {

@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
     private FragmentDrawer drawerFragment;
     public static String TAG = MainActivity.class.getSimpleName();
 
-    public Realm realm;
+    private Realm realm;
 
     protected EditText b201, b518, amber, b302, b703, b601, ga405, jet, b404, initials;
 
@@ -63,7 +63,6 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
-
         return true;
     }
 
@@ -115,8 +114,12 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        realm.close();
     }
 
+    /*Used to see if there was user input before committing to DB.
+     *Passes the text to the AsyncTask(SaveInfo).
+     */
     public void isEmpty(View v){
         b201 = (EditText)this.findViewById(R.id.b201);
         b518 = (EditText)this.findViewById(R.id.b518);
@@ -149,15 +152,14 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
                         asyncTask = new SaveInfo();
                         asyncTask.execute(b20, b51, ambe, b30, b70, b60, ga40, je, b40, initial);
                         Toast.makeText(getApplicationContext(), "Done", Toast.LENGTH_SHORT).show();
-                        }
                     }
                 }
             }
         }
+    }
 
-
+    //Used to see realm DB in a toast, but will be remove in final run
     public void realmResults(View view) {
-        //.contains()
         try {
             RealmResults<RoomsDB> results = realm.where(RoomsDB.class).findAll();
             Toast.makeText(getApplicationContext(), "" + results, Toast.LENGTH_SHORT).show();

@@ -90,8 +90,9 @@
         android:layout_height="wrap_content"
         android:id="@+id/b404"
         android:hint="2B404 Monitors"
-        android:layout_centerVertical="true"
-        android:layout_alignParentStart="true" />
+        android:layout_below="@+id/ga405"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="30dp" />
     <EditText
         android:layout_width="200dp"
         android:layout_height="wrap_content"
