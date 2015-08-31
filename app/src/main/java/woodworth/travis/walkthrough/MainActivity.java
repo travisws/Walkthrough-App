@@ -132,8 +132,8 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
         b404 = (EditText)this.findViewById(R.id.b404);
         initials = (EditText)this.findViewById(R.id.initials);
 
-        String b20 = b201.getText().toString(), b51 = b518.getText().toString(), ambe = amber.getText().toString(), b30 = b302.getText().toString(), b70 = b703.getText().toString();
-        String b60 = b601.getText().toString(), ga40 = ga405.getText().toString(), je = jet.getText().toString(), b40 = b404.getText().toString(), initial = initials.getText().toString();
+        String b20 = b201.getText().toString(), b51 = b518.getText().toString(), ambe = amber.getText().toString(), b30 = b302.getText().toString(), b70 = b703.getText().toString(),
+                b60 = b601.getText().toString(), ga40 = ga405.getText().toString(), je = jet.getText().toString(), b40 = b404.getText().toString(), initial = initials.getText().toString();
 
         long qb20 = b201.getText().length(), qb30 = b302.getText().length(), qje = jet.getText().length(), in = initials.getText().length();
 

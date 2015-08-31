@@ -1,6 +1,7 @@
 package woodworth.travis.walkthrough.realmStuff;
 
 import android.support.v7.widget.RecyclerView;
+import android.widget.AdapterView;
 
 import io.realm.RealmBaseAdapter;
 import io.realm.RealmObject;
@@ -13,7 +14,6 @@ public abstract class RealmRecyclerViewAdapter<T extends RealmObject> extends Re
 
     /* getItemCount() is not implemented in this class
      * This is left to concrete implementations */
-
     public void setRealmAdapter(RealmBaseAdapter<T> realmAdapter) {
         realmBaseAdapter = realmAdapter;
     }
@@ -26,3 +26,4 @@ public abstract class RealmRecyclerViewAdapter<T extends RealmObject> extends Re
         return realmBaseAdapter;
     }
 }
+
