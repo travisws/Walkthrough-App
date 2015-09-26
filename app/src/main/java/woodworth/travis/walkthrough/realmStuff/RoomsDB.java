@@ -14,7 +14,6 @@ public class RoomsDB extends RealmObject {
     private String          date_time;
     private String          b201;
     private String          b518;
-    private String          amber;
     private String          b302;
     private String          b702;
     private String          b601;
@@ -44,12 +43,6 @@ public class RoomsDB extends RealmObject {
     }
     public void   setB518(String b518) {
         this.b518 = b518;
-    }
-    public String getAmber(){
-        return amber;
-    }
-    public void   setAmber(String amber) {
-        this.amber = amber;
     }
     public String    getB302() {
         return b302;

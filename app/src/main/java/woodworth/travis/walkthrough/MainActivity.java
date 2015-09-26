@@ -1,5 +1,6 @@
 package woodworth.travis.walkthrough;
 
+import android.content.Intent;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -23,6 +24,7 @@ import woodworth.travis.walkthrough.realmStuff.RoomsDB;
 import woodworth.travis.walkthrough.weekStuff.FragmentHome;
 import woodworth.travis.walkthrough.weekStuff.FragmentInput;
 import woodworth.travis.walkthrough.navStuff.FragmentDrawer;
+import woodworth.travis.walkthrough.weekStuff.FragmentNotes;
 
 public class MainActivity extends AppCompatActivity implements FragmentDrawer.FragmentDrawerListener {
 
@@ -46,7 +48,7 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
         RealmConfiguration realmConfig = new RealmConfiguration.Builder(this).build();
-        Realm.deleteRealm(realmConfig); //Remember to remove
+        //Realm.deleteRealm(realmConfig); //Remember to remove
         Realm.setDefaultConfiguration(realmConfig);
         realm = Realm.getInstance(realmConfig); //DO NOT TOUCH!!! if you want realm to work...
 
@@ -98,6 +100,9 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
                 fragment = new FragmentInput();
                 title = getString(R.string.input_page);
                 break;
+            case 2:
+                fragment = new FragmentNotes();
+                title = getString(R.string.notes_page);
             default:
                 break;
         }
@@ -123,7 +128,6 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
     public void isEmpty(View v){
         b201 = (EditText)this.findViewById(R.id.b201);
         b518 = (EditText)this.findViewById(R.id.b518);
-        amber = (EditText)this.findViewById(R.id.amber);
         b302 = (EditText)this.findViewById(R.id.b302);
         b703 = (EditText)this.findViewById(R.id.b703);
         b601 = (EditText)this.findViewById(R.id.b601);
@@ -132,7 +136,7 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
         b404 = (EditText)this.findViewById(R.id.b404);
         initials = (EditText)this.findViewById(R.id.initials);
 
-        String b20 = b201.getText().toString(), b51 = b518.getText().toString(), ambe = amber.getText().toString(), b30 = b302.getText().toString(), b70 = b703.getText().toString(),
+        String b20 = b201.getText().toString(), b51 = b518.getText().toString(), b30 = b302.getText().toString(), b70 = b703.getText().toString(),
                 b60 = b601.getText().toString(), ga40 = ga405.getText().toString(), je = jet.getText().toString(), b40 = b404.getText().toString(), initial = initials.getText().toString();
 
         long qb20 = b201.getText().length(), qb30 = b302.getText().length(), qje = jet.getText().length(), in = initials.getText().length();
@@ -150,12 +154,22 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
                         Toast.makeText(getApplicationContext(), "You did not enter text in the box", Toast.LENGTH_LONG).show();
                     }else{
                         asyncTask = new SaveInfo();
-                        asyncTask.execute(b20, b51, ambe, b30, b70, b60, ga40, je, b40, initial);
+                        asyncTask.execute(b20, b51, b30, b70, b60, ga40, je, b40, initial);
                         Toast.makeText(getApplicationContext(), "Done", Toast.LENGTH_SHORT).show();
                     }
                 }
             }
         }
+    }
+
+    public FragmentTransaction open(){
+        FragmentTransaction fragmentTransaction;
+        fragmentTransaction = getSupportFragmentManager().beginTransaction();
+        FragmentInput input = new FragmentInput();
+        fragmentTransaction.replace(R.id.fragment_input, input);
+        fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.commit();
+        return fragmentTransaction;
     }
 
     //Used to see realm DB in a toast, but will be remove in final run
@@ -167,4 +181,5 @@ public class MainActivity extends AppCompatActivity implements FragmentDrawer.Fr
             Log.d(TAG, "Results" + e);
         }
     }
+
 }

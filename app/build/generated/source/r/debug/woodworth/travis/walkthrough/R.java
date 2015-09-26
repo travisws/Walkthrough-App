@@ -1703,13 +1703,12 @@ containing a value of this type.
         public static final int activity_chooser_view_content=0x7f0d0027;
         public static final int alertTitle=0x7f0d0031;
         public static final int always=0x7f0d0017;
-        public static final int amber=0x7f0d005f;
         public static final int b201=0x7f0d005d;
-        public static final int b302=0x7f0d0060;
-        public static final int b404=0x7f0d0065;
+        public static final int b302=0x7f0d005f;
+        public static final int b404=0x7f0d0064;
         public static final int b518=0x7f0d005e;
-        public static final int b601=0x7f0d0062;
-        public static final int b703=0x7f0d0061;
+        public static final int b601=0x7f0d0061;
+        public static final int b703=0x7f0d0060;
         public static final int beginning=0x7f0d0014;
         public static final int button=0x7f0d005a;
         public static final int buttonPanel=0x7f0d0037;
@@ -1735,18 +1734,18 @@ containing a value of this type.
         public static final int end_padder=0x7f0d0075;
         public static final int expand_activities_button=0x7f0d0028;
         public static final int expanded_menu=0x7f0d0038;
-        public static final int fragment_monday=0x7f0d005b;
+        public static final int fragment_input=0x7f0d005b;
         public static final int fragment_navigation_drawer=0x7f0d0054;
-        public static final int ga405=0x7f0d0063;
+        public static final int ga405=0x7f0d0062;
         public static final int home=0x7f0d0004;
         public static final int homeAsUp=0x7f0d000e;
         public static final int icon=0x7f0d002c;
         public static final int ifRoom=0x7f0d0019;
         public static final int image=0x7f0d0029;
         public static final int info=0x7f0d0074;
-        public static final int initials=0x7f0d0066;
+        public static final int initials=0x7f0d0065;
         public static final int item_touch_helper_previous_elevation=0x7f0d0005;
-        public static final int jet=0x7f0d0064;
+        public static final int jet=0x7f0d0063;
         public static final int line1=0x7f0d006e;
         public static final int line3=0x7f0d0072;
         public static final int listMode=0x7f0d000a;
@@ -1754,6 +1753,7 @@ containing a value of this type.
         public static final int media_actions=0x7f0d006c;
         public static final int middle=0x7f0d0016;
         public static final int multiply=0x7f0d001f;
+        public static final int nav_header_container=0x7f0d0066;
         public static final int never=0x7f0d001a;
         public static final int none=0x7f0d000f;
         public static final int normal=0x7f0d000b;
@@ -1842,24 +1842,27 @@ containing a value of this type.
         public static final int fragment_home=0x7f04001c;
         public static final int fragment_input=0x7f04001d;
         public static final int fragment_navigation_drawer=0x7f04001e;
-        public static final int items_home=0x7f04001f;
-        public static final int nav_drawer_row=0x7f040020;
-        public static final int notification_media_action=0x7f040021;
-        public static final int notification_media_cancel_action=0x7f040022;
-        public static final int notification_template_big_media=0x7f040023;
-        public static final int notification_template_big_media_narrow=0x7f040024;
-        public static final int notification_template_lines=0x7f040025;
-        public static final int notification_template_media=0x7f040026;
-        public static final int notification_template_part_chronometer=0x7f040027;
-        public static final int notification_template_part_time=0x7f040028;
-        public static final int select_dialog_item_material=0x7f040029;
-        public static final int select_dialog_multichoice_material=0x7f04002a;
-        public static final int select_dialog_singlechoice_material=0x7f04002b;
-        public static final int support_simple_spinner_dropdown_item=0x7f04002c;
-        public static final int toolbar=0x7f04002d;
+        public static final int fragment_notes=0x7f04001f;
+        public static final int items_home=0x7f040020;
+        public static final int nav_drawer_row=0x7f040021;
+        public static final int notification_media_action=0x7f040022;
+        public static final int notification_media_cancel_action=0x7f040023;
+        public static final int notification_template_big_media=0x7f040024;
+        public static final int notification_template_big_media_narrow=0x7f040025;
+        public static final int notification_template_lines=0x7f040026;
+        public static final int notification_template_media=0x7f040027;
+        public static final int notification_template_part_chronometer=0x7f040028;
+        public static final int notification_template_part_time=0x7f040029;
+        public static final int select_dialog_item_material=0x7f04002a;
+        public static final int select_dialog_multichoice_material=0x7f04002b;
+        public static final int select_dialog_singlechoice_material=0x7f04002c;
+        public static final int support_simple_spinner_dropdown_item=0x7f04002d;
+        public static final int toolbar=0x7f04002e;
     }
     public static final class menu {
-        public static final int menu_main=0x7f0e0000;
+        public static final int menu_fragment_notes=0x7f0e0000;
+        public static final int menu_main=0x7f0e0001;
+        public static final int menu_notes=0x7f0e0002;
     }
     public static final class mipmap {
         public static final int ic_launcher=0x7f030000;
@@ -1887,9 +1890,14 @@ containing a value of this type.
         public static final int drawer_close=0x7f060013;
         public static final int drawer_open=0x7f060014;
         public static final int fragment_monday=0x7f060015;
-        public static final int home_page=0x7f060016;
-        public static final int input_page=0x7f060017;
-        public static final int status_bar_notification_info_overflow=0x7f060018;
+        public static final int hello_blank_fragment=0x7f060016;
+        public static final int hello_world=0x7f060017;
+        public static final int home_page=0x7f060018;
+        public static final int input_page=0x7f060019;
+        public static final int notes_page=0x7f06001a;
+        public static final int status_bar_notification_info_overflow=0x7f06001b;
+        public static final int title_activity_fragment_notes=0x7f06001c;
+        public static final int title_activity_notes=0x7f06001d;
     }
     public static final class style {
         public static final int AlertDialog_AppCompat=0x7f080075;

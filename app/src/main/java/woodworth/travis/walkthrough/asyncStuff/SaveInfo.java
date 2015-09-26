@@ -20,7 +20,7 @@ public class SaveInfo extends AsyncTask<String, String, String> {
     @Override
     protected String doInBackground(String... args) {
 
-        String a = args[0], b = args[1], c = args[2], d = args[3], e = args[4], f = args[5], g = args[6], h = args[7], i = args[8], j = args[9];
+        String a = args[0], b = args[1], c = args[2], d = args[3], e = args[4], f = args[5], g = args[6], h = args[7], i = args[8];
 
         realm = Realm.getDefaultInstance();
 
@@ -32,14 +32,13 @@ public class SaveInfo extends AsyncTask<String, String, String> {
         rooms.setDate_time("" + df);
         rooms.setB201("" + a);
         rooms.setB518("" + b);
-        rooms.setAmber("" + c);
-        rooms.setB302("" + d);
-        rooms.setB702("" + e);
-        rooms.setB601("" + f);
-        rooms.setGa405("" + g);
-        rooms.setJet("" + h);
-        rooms.setB404("" + i);
-        rooms.setInitials("" + j);
+        rooms.setB302("" + c);
+        rooms.setB702("" + d);
+        rooms.setB601("" + e);
+        rooms.setGa405("" + f);
+        rooms.setJet("" + g);
+        rooms.setB404("" + h);
+        rooms.setInitials("" + h);
 
         realm.commitTransaction();
 

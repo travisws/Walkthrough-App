@@ -1,5 +1,6 @@
 package woodworth.travis.walkthrough.realmStuff;
 
+
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,22 +19,26 @@ import woodworth.travis.walkthrough.R;
 /**
  * Created by travis woodworth-smith on 8/14/15.
  */
-public class EventsAdapter extends RealmRecyclerViewAdapter<RoomsDB> {
-    String value;
+public class EventsAdapter extends RealmRecyclerViewAdapter<RoomsDB>{
+
 
     private class EventViewHolder extends RecyclerView.ViewHolder {
 
         public TextView textView;
 
-        public EventViewHolder(View view) {
+        public EventViewHolder(final View view) {
             super(view);
             textView = (TextView) itemView.findViewById(R.id.title);
+
         }
     }
 
+    public RoomsDB event;
+
     @Override
-    public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int i) {
+    public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, final int i) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.items_home, parent, false);
+
         return new EventViewHolder(v);
     }
 
@@ -41,7 +46,7 @@ public class EventsAdapter extends RealmRecyclerViewAdapter<RoomsDB> {
     @Override
     public void onBindViewHolder(RecyclerView.ViewHolder viewHolder, int i) {
         EventViewHolder evh = (EventViewHolder) viewHolder;
-        RoomsDB event = getItem(i); //Gets realm items
+        event = getItem(i); //Gets realm items
 
         Date date = new Date();
         SimpleDateFormat sdf = new SimpleDateFormat("h:mm a");

@@ -9,20 +9,6 @@
         <dex dex="/home/travisws/AndroidStudioProjects/WalkThrough/app/build/intermediates/pre-dexed/debug/classes-57dc64189e9995c491d5f72fef8e968f933ee03c.jar" />
     </item>
     <item
-        jar="/home/travisws/AndroidStudioProjects/WalkThrough/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="4486e953d1f35f8ccab098b1dd67146366d5f731">
-        <dex dex="/home/travisws/AndroidStudioProjects/WalkThrough/app/build/intermediates/pre-dexed/debug/classes-cfb3d5a969edfd558f5017d3e4b0b5a31ea969b7.jar" />
-    </item>
-    <item
-        jar="/home/travisws/AndroidStudioProjects/WalkThrough/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/22.2.1/jars/classes.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="3abb4b88f5a8a0584a9b01d3170d7165f12f8588">
-        <dex dex="/home/travisws/AndroidStudioProjects/WalkThrough/app/build/intermediates/pre-dexed/debug/classes-94e16fc7d65c0c629bcfbaf5a317cad9b5e23f51.jar" />
-    </item>
-    <item
         jar="/home/travisws/AndroidStudioProjects/WalkThrough/app/build/intermediates/exploded-aar/com.android.support/cardview-v7/22.2.1/jars/classes.jar"
         jumboMode="false"
         revision="22.0.1"
@@ -30,11 +16,11 @@
         <dex dex="/home/travisws/AndroidStudioProjects/WalkThrough/app/build/intermediates/pre-dexed/debug/classes-e8a21e379bcbe99284d1fa317ab7d2d8bdac44df.jar" />
     </item>
     <item
-        jar="/home/travisws/AndroidStudioProjects/WalkThrough/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.1/jars/libs/internal_impl-22.2.1.jar"
+        jar="/home/travisws/.gradle/caches/modules-2/files-2.1/io.realm/realm-android/0.81.1/9e3c21f13279ee01f5a05553bcb98044d6797c03/realm-android-0.81.1.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
-        <dex dex="/home/travisws/AndroidStudioProjects/WalkThrough/app/build/intermediates/pre-dexed/debug/internal_impl-22.2.1-60ed62fceef2c3f18999757eda1727c82b8a48a6.jar" />
+        sha1="9e3c21f13279ee01f5a05553bcb98044d6797c03">
+        <dex dex="/home/travisws/AndroidStudioProjects/WalkThrough/app/build/intermediates/pre-dexed/debug/realm-android-0.81.1-70019d42ba3fbead8e6a1ae6ab5d7533f4c73139.jar" />
     </item>
     <item
         jar="/home/travisws/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/22.2.1/support-annotations-22.2.1.jar"
@@ -44,11 +30,25 @@
         <dex dex="/home/travisws/AndroidStudioProjects/WalkThrough/app/build/intermediates/pre-dexed/debug/support-annotations-22.2.1-59ac2de4f1fe6c342691aff8ef7ad5f7ad50dd9b.jar" />
     </item>
     <item
-        jar="/home/travisws/.gradle/caches/modules-2/files-2.1/io.realm/realm-android/0.81.1/9e3c21f13279ee01f5a05553bcb98044d6797c03/realm-android-0.81.1.jar"
+        jar="/home/travisws/AndroidStudioProjects/WalkThrough/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/22.2.1/jars/classes.jar"
         jumboMode="false"
         revision="22.0.1"
-        sha1="9e3c21f13279ee01f5a05553bcb98044d6797c03">
-        <dex dex="/home/travisws/AndroidStudioProjects/WalkThrough/app/build/intermediates/pre-dexed/debug/realm-android-0.81.1-70019d42ba3fbead8e6a1ae6ab5d7533f4c73139.jar" />
+        sha1="4486e953d1f35f8ccab098b1dd67146366d5f731">
+        <dex dex="/home/travisws/AndroidStudioProjects/WalkThrough/app/build/intermediates/pre-dexed/debug/classes-cfb3d5a969edfd558f5017d3e4b0b5a31ea969b7.jar" />
+    </item>
+    <item
+        jar="/home/travisws/AndroidStudioProjects/WalkThrough/app/build/intermediates/exploded-aar/com.android.support/support-v4/22.2.1/jars/libs/internal_impl-22.2.1.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="c471eaaba13ff64f6e0383d1c30a9cdc9a97efeb">
+        <dex dex="/home/travisws/AndroidStudioProjects/WalkThrough/app/build/intermediates/pre-dexed/debug/internal_impl-22.2.1-60ed62fceef2c3f18999757eda1727c82b8a48a6.jar" />
+    </item>
+    <item
+        jar="/home/travisws/AndroidStudioProjects/WalkThrough/app/build/intermediates/exploded-aar/com.android.support/recyclerview-v7/22.2.1/jars/classes.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="3abb4b88f5a8a0584a9b01d3170d7165f12f8588">
+        <dex dex="/home/travisws/AndroidStudioProjects/WalkThrough/app/build/intermediates/pre-dexed/debug/classes-94e16fc7d65c0c629bcfbaf5a317cad9b5e23f51.jar" />
     </item>
 
 </items>

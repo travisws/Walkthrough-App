@@ -38,7 +38,7 @@
         android:id="@+id/fragment_navigation_drawer"
         android:name="woodworth.travis.walkthrough.navStuff.FragmentDrawer"
         android:layout_width="match_parent"
-        android:layout_height="500dp"
+        android:layout_height="match_parent"
         android:layout_gravity="start"
         app:layout="@layout/fragment_navigation_drawer"
         tools:layout="@layout/fragment_navigation_drawer" />

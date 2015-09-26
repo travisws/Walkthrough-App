@@ -10,7 +10,6 @@ import android.view.ViewGroup;
 
 import io.realm.Realm;
 import io.realm.RealmResults;
-import woodworth.travis.walkthrough.MainActivity;
 import woodworth.travis.walkthrough.R;
 import woodworth.travis.walkthrough.realmStuff.EventsAdapter;
 import woodworth.travis.walkthrough.realmStuff.RealmEventsAdapter;
@@ -23,7 +22,6 @@ public class FragmentHome extends Fragment {
 
     private EventsAdapter adapter;
     private Realm realm;
-    public String x;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -33,9 +31,18 @@ public class FragmentHome extends Fragment {
         RecyclerView rv  = (RecyclerView) view.findViewById(R.id.recycler_view_home);
         rv.setLayoutManager(new LinearLayoutManager(getActivity()));
         rv.setAdapter(adapter);
+
         return view;
     }
-
+/*
+    @Override
+    public void test(){
+        Fragment fragment1 = new FragmentHome();
+        FragmentManager fragmentManager = getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.replace(R.id.container_body, fragment1);
+        fragmentTransaction.commit();
+    }*/
 
     @Override
     public void onResume() {
@@ -47,7 +54,6 @@ public class FragmentHome extends Fragment {
         // Set the data and tell the RecyclerView to draw
         adapter.setRealmAdapter(realmAdapter);
         adapter.notifyDataSetChanged();
-
 
     }
 

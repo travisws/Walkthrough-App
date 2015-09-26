@@ -3,7 +3,7 @@
     android:layout_height="match_parent"
     tools:context="woodworth.travis.walkthrough.weekStuff.FragmentInput"
     android:orientation="vertical"
-    android:id="@+id/fragment_monday">
+    android:id="@+id/fragment_input">
 
 
     <Button
@@ -31,74 +31,68 @@
         android:layout_height="wrap_content"
         android:id="@+id/b518"
         android:hint="2B518"
-        android:layout_above="@+id/amber"
+        android:layout_above="@+id/b302"
         android:layout_toEndOf="@+id/b201" />
 
-    <EditText
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/amber"
-        android:hint="Amber Light"
-        android:layout_below="@+id/b201"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="25dp" />
+
 
     <EditText
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:id="@+id/b302"
         android:hint="2B302"
-        android:layout_alignTop="@+id/amber"
-        android:layout_toEndOf="@+id/amber" />
-
-    <EditText
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:id="@+id/b703"
-        android:hint="2B703"
-        android:layout_below="@+id/amber"
+        android:layout_below="@+id/b201"
         android:layout_alignParentStart="true"
         android:layout_marginTop="32dp" />
 
     <EditText
         android:layout_width="200dp"
         android:layout_height="wrap_content"
+        android:id="@+id/b703"
+        android:hint="2B703"
+        android:layout_alignTop="@+id/b302"
+        android:layout_toEndOf="@+id/b302" />
+
+    <EditText
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
         android:id="@+id/b601"
         android:hint="2B601"
-        android:layout_alignTop="@+id/b703"
-        android:layout_toEndOf="@+id/b703" />
+        android:layout_below="@+id/b302"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="25dp" />
 
     <EditText
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:id="@+id/ga405"
         android:hint="GA405"
-        android:layout_below="@+id/b703"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="28dp" />
+        android:layout_alignTop="@+id/b601"
+        android:layout_toEndOf="@+id/b601" />
 
     <EditText
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:id="@+id/jet"
         android:hint="Jet Trmp (F)"
-        android:layout_alignTop="@+id/ga405"
-        android:layout_toEndOf="@+id/ga405" />
+        android:layout_below="@+id/b601"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="31dp" />
 
     <EditText
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:id="@+id/b404"
         android:hint="2B404 Monitors"
-        android:layout_below="@+id/ga405"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="30dp" />
+        android:layout_alignTop="@+id/jet"
+        android:layout_toEndOf="@+id/jet" />
     <EditText
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:id="@+id/initials"
         android:hint="Initials:"
-        android:layout_alignTop="@+id/b404"
-        android:layout_toEndOf="@+id/b404" />
+        android:layout_below="@+id/jet"
+        android:layout_alignEnd="@+id/Submit"
+        android:layout_marginTop="25dp" />
 
 </RelativeLayout>
