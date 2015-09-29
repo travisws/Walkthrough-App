@@ -7,7 +7,7 @@ import java.text.DateFormat;
 import java.util.Date;
 
 import io.realm.Realm;
-import woodworth.travis.walkthrough.realmStuff.RoomsDB;
+import woodworth.travis.walkthrough.realmHomeStuff.RoomsDB;
 
 /**
  * Created by travisws on 8/15/15.

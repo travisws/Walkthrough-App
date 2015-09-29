@@ -1,4 +1,4 @@
-package woodworth.travis.walkthrough.realmStuff;
+package woodworth.travis.walkthrough.realmHomeStuff;
 
 import io.realm.RealmObject;
 import io.realm.annotations.Ignore;

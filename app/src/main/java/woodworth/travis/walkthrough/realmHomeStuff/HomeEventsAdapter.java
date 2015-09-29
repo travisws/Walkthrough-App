@@ -1,4 +1,4 @@
-package woodworth.travis.walkthrough.realmStuff;
+package woodworth.travis.walkthrough.realmHomeStuff;
 
 
 import android.support.v7.widget.RecyclerView;
@@ -19,7 +19,7 @@ import woodworth.travis.walkthrough.R;
 /**
  * Created by travis woodworth-smith on 8/14/15.
  */
-public class EventsAdapter extends RealmRecyclerViewAdapter<RoomsDB>{
+public class HomeEventsAdapter extends HomeRealmRecyclerViewAdapter<RoomsDB> {
 
 
     private class EventViewHolder extends RecyclerView.ViewHolder {
@@ -81,7 +81,7 @@ public class EventsAdapter extends RealmRecyclerViewAdapter<RoomsDB>{
     }
     /* The inner RealmBaseAdapter
      * view count is applied here.
-     * getRealmAdapter is defined in RealmRecyclerViewAdapter.
+     * getRealmAdapter is defined in HomeRealmRecyclerViewAdapter.
      */
     @Override
     public int getItemCount() {

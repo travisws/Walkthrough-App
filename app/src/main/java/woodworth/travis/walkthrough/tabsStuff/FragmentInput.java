@@ -1,4 +1,4 @@
-package woodworth.travis.walkthrough.weekStuff;
+package woodworth.travis.walkthrough.tabsStuff;
 
 import android.app.Activity;
 import android.os.Bundle;
